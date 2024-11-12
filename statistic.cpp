@@ -1,6 +1,7 @@
 #include "statistic.h"
 
-statistic::statistic(string name, string number_phone, int call_fee, int number_NH, int number_LC, int number_X, int number_RX) {
+statistic::statistic(string name, string number_phone, int call_fee, int number_NH, 
+						int number_LC, int number_X, int number_RX) {
     this->name = name;
     this->number_phone = number_phone;
     this->call_fee = call_fee;

@@ -37,13 +37,15 @@ void systemStatistic::getData() {
                 }
             }
             int timeStartCall = sstoi(call_vector[j].getTime_start().substr(1,2));
-            if(call_vector[i].getDayofWeek() == 0 || call_vector[i].getDayofWeek() == 6 || timeStartCall >= 23 || timeStartCall <= 5)
+            if(call_vector[i].getDayofWeek() == 0 || call_vector[i].getDayofWeek() == 6 
+				|| timeStartCall >= 23 || timeStartCall <= 5)
                 fee += 770 * call_vector[j].getMinute() * heSoMien;
             else
                 fee += 1100 * call_vector[j].getMinute() * heSoMien;
         }
         
-        statistic customer(customers_vector[i].getName(), customers_vector[i].getNumber_phone(), fee, num_NH, num_LC, num_X, num_RX);
+        statistic customer(customers_vector[i].getName(), customers_vector[i].getNumber_phone(), 
+							fee, num_NH, num_LC, num_X, num_RX);
         statistic_system.add(customer);
     }    
 }

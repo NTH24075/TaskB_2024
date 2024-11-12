@@ -70,6 +70,7 @@ int infor_call::setDayofWeek(string date) {
 }
 
 ostream& operator<<(ostream& os, const infor_call& a) {
-    os << a.getNumber_phone() << " " << a.getMinute() << " " << a.getTime_start() << " " << a.getDay() << a.getRegion() << "\n";
+    os << a.getNumber_phone() << " " << a.getMinute() << " " << a.getTime_start() << " " 
+	<< a.getDay() << a.getRegion() << "\n";
     return os;
 }

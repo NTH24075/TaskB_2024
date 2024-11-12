@@ -11,6 +11,9 @@ Vector_build<data>::Vector_build() : size_v(0), cap(1) {
 template<typename data>
 Vector_build<data>::Vector_build(int n, data DT) : size_v(n), cap(n) {
     dynamic_array = new data[cap];
+    for(int i=0;i<=n;i++){
+    	dynamic_array[i]=DT;
+    }
 }
 
 template<typename data>
